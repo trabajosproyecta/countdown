@@ -116,6 +116,7 @@ h2 {
 h3 {
 	font-family: 'Raleway', sans-serif;
 	font-size: 30px;
+	font-weight: 600;
 }
 
 h4 {
@@ -185,7 +186,7 @@ strong {
 
 #work-date {
 	font-size: 36pt;
-	font-weight: bold;
+	font-weight: bolder;
 	padding-top: 20px 
 }
 
