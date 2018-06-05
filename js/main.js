@@ -3,7 +3,9 @@
 	templatestock.co @templatestock
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
-
+/*====================================
+		Redirect
+======================================*/
 
 (function($) {
 	"use strict";
@@ -114,7 +116,8 @@
 					Clock Countdown
 		======================================*/
 
-		$('#clock-countdown').countdown('2018/06/06 13:00:00').on('update.countdown', function(event) {
+		const count = $('#clock-countdown').countdown(inscription_string)
+		count.on('update.countdown', function(event) {
 			var $this = $(this).html(event.strftime(''
 				+ '<div class="counter-container"><div class="counter-box first"><div class="number">%-D</div><span>Día%!d</span></div>'
 				+ '<div class="counter-box"><div class="number">%H</div><span>Horas</span></div>'
@@ -123,8 +126,11 @@
 			));
 		});
 		
-		
-		
+		count.on( 'finish.countdown' ,function(event) {
+			to_form()
+		})
+
+
 		/*====================================
 					Flexslider
 		======================================*/
